@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ../partials/head %>
+	</head>
+	<body>
+		<header>
+			<div id="head">
+				<div id="app-title">Basic User Manager</div>
+			</div>
+		</header>
+		<main>
+		<div id="container">
+			<div id="page-top">
+				<div id="page-name">Users List</div>
+				<a href="/adduser"><div class="action-btn" id="add-user">Add user</div></a>
+			</div>
+			<div id="users-container">
+				<% users.forEach(function(user){ %>
+				<a href="<%= user.id %>">
+				<div id="users-li">
+					<div class="name"><%= user.lastName +" "+ user.firstName %></div>
+				</div>
+				</a>
+				<% }); %>
+			</div>	
+		</div>
+		</main>
+		<footer>
+			<% include ../partials/footer %>
+		</footer>
+	</body>
+</html>

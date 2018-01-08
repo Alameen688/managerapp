@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Basic User Manager App for DevOps</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body>
+		<header>
+			<div id="head">
+				<div id="app-title">Basic User Manager</div>
+			</div>
+		</header>
+		<main>
+		<div id="container">
+			<div id="page-top">
+				<div id="page-name">Edit User</div>	
+			</div>
+			<div id="users-container">
+				<div id="newuser-form">
+			    	<form action="/edituser" method="POST">
+		    			<input class="f-input" type="text" name="id" style="display:none" value="<%= user.id %>"/>
+		    			<input class="f-input" type="text" name="email" placeholder="Email" value="<%= user.email %>"/><br />
+		    			<input class="f-input" type="password" name="pass" placeholder="Password" value="<%= user.password %>"/><br />
+		    			<input class="f-input" type="text" name="fname" placeholder="First Name" value="<%= user.firstName %>"/><br />
+		    			<input class="f-input" type="text" name="lname" placeholder="Last Name" value="<%= user.lastName %>"/><br />
+		    			<textarea name="bio" rows="8" cols="40" placeholder="Very short biography here"><%= user.bio %></textarea>
+		    			<input id="user-form-btn" type="submit" value="Edit User"/>
+		    		</form>
+		    	</div>
+			</div>	
+		</div>
+		</main>
+		<footer>
+			<p class="footer-text"><!--Basic User Manager App for DevOps course application--></p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ../partials/head %>
+	</head>
+	<body>
+		<header>
+			<div id="head">
+				<div id="app-title">Basic User Manager</div>
+			</div>
+		</header>
+		<main>
+		<div id="container">
+			<div id="page-top">
+				<div id="page-name">Add User</div>
+				
+			</div>
+			<div id="users-container">
+				<div id="newuser-form">
+		    	<form action="/adduser" method="POST">
+		    		<input class="f-input" type="text" name="email" placeholder="Email"/><br />
+		    		<input class="f-input" type="password" name="pass" placeholder="Password"/><br />
+		    		<input class="f-input" type="text" name="fname" placeholder="First Name"/><br />
+		    		<input class="f-input" type="text" name="lname" placeholder="Last Name"/><br />
+		    		<textarea name="bio" rows="8" cols="40" placeholder="Very short biography here"></textarea>
+		    		<input id="user-form-btn" class="action-btn" type="submit" value="Add User"/>
+		    	</form>
+		    </div>
+			</div>	
+		</div>
+		</main>
+		<footer>
+			<% include ../partials/footer %>
+		</footer>
+	</body>
+</html>

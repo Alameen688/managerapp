@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ../partials/head %>
+	</head>
+	<body>
+		<header>
+			<div id="head">
+				<div id="app-title">Basic User Manager</div>
+			</div>
+		</header>
+		<main>
+		<div id="container">
+			<div id="page-top">
+				<div id="page-name">Users Info</div>
+				<a href="/edituser/<%= user.id %>"><div class="action-btn" id="edit-user">Edit user</div></a>
+			</div>
+			<div id="users-container">
+				<div class="email"><%= user.email %></div>
+				<div class="name"><%= user.lastName +" "+ user.firstName %></div>
+				<div class="bio"><%= user.bio %></div>
+
+				<a href="/removeuser/<%= user.id %>"><div class="" id="remove-user">Remove user</div></a>
+			</div>	
+		</div>
+		</main>
+		<footer>
+			<% include ../partials/footer %>
+		</footer>
+	</body>
+</html>
