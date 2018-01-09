@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/userdb', function(err) {
+mongoose.connect('mongodb://mongo:27017', function(err) {
 	if (err) throw err;
 	console.log('Succesfully connected');
 });

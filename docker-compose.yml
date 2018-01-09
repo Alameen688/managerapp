@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  mongo: 
+    image: mongo 
+    ports:
+      - "27017:27017"
+    restart: always
+  web: 
+    build: ./ 
+    ports:
+      - "3000:3000" 
+    links:
+      - mongo
+    volumes:
+      - ./:/app
+    depends_on:
+      - mongo
+    command: nodemon /app/server.js
+      
